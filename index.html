@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подножный корм — ешь хорошо, живи ярко | Сириус</title>
+  <meta name="description" content="Здоровое кафе в Сириусе: завтраки без сахара, авторские напитки, десерты без глютена. Сыграй в игру о правильном питании и получи скидку 15%. Ежедневно 08:00–20:00.">
+  <link rel="icon" href="Фото/Логотипы/1147365f-47c1-4ac1-829f-dd351f2c93ec.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Подножный корм",
+    "description": "Кафе здорового питания в Сириусе",
+    "servesCuisine": ["Здоровое питание", "Завтраки", "Кофе", "Десерты"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Цимлянская, 12к13",
+      "addressLocality": "Сириус",
+      "addressRegion": "Краснодарский край",
+      "postalCode": "354349",
+      "addressCountry": "RU"
+    },
+    "telephone": "+79220266646",
+    "openingHours": "Mo-Su 08:00-20:00",
+    "url": "https://t.me/podnozhnyj_korm",
+    "priceRange": "₽₽"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Прелоадер -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__spinner"></div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo" aria-label="Подножный корм">
+        <img src="Фото/Логотипы/1147365f-47c1-4ac1-829f-dd351f2c93ec.jpeg" alt="Подножный корм" width="40" height="40">
+        <span class="header__logo-text">Подножный<br><strong>корм</strong></span>
+      </a>
+      <nav class="header__nav" aria-label="Навигация">
+        <a href="#benefits" class="header__link">Польза</a>
+        <a href="#menu" class="header__link">Меню</a>
+        <a href="#game" class="header__link">Игра</a>
+        <a href="#cake" class="header__link">Заказать торт</a>
+        <a href="#contacts" class="header__link">Контакты</a>
+      </nav>
+      <a href="#cake" class="btn btn--primary header__cta">Заказать</a>
+      <button class="header__burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#benefits" class="mobile-nav__link">Польза</a>
+    <a href="#menu" class="mobile-nav__link">Меню</a>
+    <a href="#game" class="mobile-nav__link">🎮 Игра + скидка</a>
+    <a href="#cake" class="mobile-nav__link">Заказать торт</a>
+    <a href="#contacts" class="mobile-nav__link">Контакты</a>
+    <a href="tel:+79220266646" class="btn btn--primary mobile-nav__cta">+7 (922) 026-66-46</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="Фото/Напитки/Кофе на песке.jpg" alt="" class="hero__img" loading="eager">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="container hero__content">
+      <div class="hero__badge">☀️ Открыто сегодня · 08:00 – 20:00</div>
+      <h1 class="hero__title">Ешьте так,<br>чтобы <em>чувствовать</em><br>себя на все 100%</h1>
+      <p class="hero__subtitle">Забудьте про «диетические» муки —<br>здесь вкусно даже без сахара, без всяких секретов.<br>Свежие продукты, честные рецепты —<br>один укус — и никаких для вас запретов!</p>
+      <div class="hero__buttons">
+        <a href="#menu" class="btn btn--primary btn--lg">Смотреть меню</a>
+        <a href="#game" class="btn btn--glass btn--lg">🎮 Сыграть и получить −15%</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">50+</span>
+          <span class="hero__stat-label">блюд без сахара</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">12</span>
+          <span class="hero__stat-label">авторских напитков</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">0</span>
+          <span class="hero__stat-label">глютена в десертах</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ПОЛЬЗА / ПРОБЛЕМА ===== -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Почему это работает</span>
+        <h2 class="section-title">Здоровая еда ≠ скучная еда</h2>
+        <p class="section-subtitle">Мы убрали из кухни всё, что мешает вам чувствовать себя бодро, — и оставили только то, что даёт энергию</p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="bento-card bento-card--large">
+          <div class="bento-card__emoji">🚫🍬</div>
+          <h3>Ноль добавленного сахара</h3>
+          <p>Сахар вызывает скачок глюкозы, а через час — упадок сил и желание съесть ещё сладкого. Мы заменяем его фруктами, мёдом и урбечом — вы получаете сладость без «качелей» энергии.</p>
+        </article>
+
+        <article class="bento-card">
+          <div class="bento-card__emoji">⚡</div>
+          <h3>Энергия до вечера</h3>
+          <p>Сложные углеводы + белок = ровный уровень энергии без «проседания» после обеда.</p>
+        </article>
+
+        <article class="bento-card">
+          <div class="bento-card__emoji">🌾</div>
+          <h3>Без глютена и лактозы</h3>
+          <p>Если у вас чувствительность к этим продуктам — у нас есть полноценное меню, а не «ну вот этот один пункт».</p>
+        </article>
+
+        <article class="bento-card bento-card--wide">
+          <div class="bento-card__emoji">🥑</div>
+          <h3>Полезные жиры вместо трансжиров</h3>
+          <p>Авокадо, орехи, сыродавленное масло, урбеч — то, что действительно нужно вашему организму для кожи, мозга и гормонов. Никаких маргарина и пальмового масла.</p>
+        </article>
+
+        <article class="bento-card">
+          <div class="bento-card__emoji">🧠</div>
+          <h3>Еда для мозга</h3>
+          <p>Омега-3, антиоксиданты из ягод и зелени — пища, которая помогает думать ясно.</p>
+        </article>
+
+        <article class="bento-card bento-card--accent">
+          <div class="bento-card__emoji">😋</div>
+          <h3>И да, это вкусно</h3>
+          <p>Проверено сотнями гостей. Если бы было невкусно — они бы не возвращались.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== МЕНЮ ===== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Что попробовать</span>
+        <h2 class="section-title">Меню, от которого не устаёте</h2>
+        <p class="section-subtitle">Каждое блюдо — сбалансировано. Белок, сложные углеводы, полезные жиры — всё в одном тарелке</p>
+      </div>
+
+      <!-- Ряд фото меню -->
+      <div class="menu-photos">
+        <img src="Фото/Меню/Меню завтраки.jpg" alt="Завтраки: каши, сырники, боулы" loading="lazy">
+        <img src="Фото/Меню/Кофе и какао.jpg" alt="Кофе и какао" loading="lazy">
+        <img src="Фото/Меню/Напитки.jpg" alt="Авторские напитки" loading="lazy">
+        <img src="Фото/Меню/Смузи.jpg" alt="Смузи" loading="lazy">
+        <img src="Фото/Меню/Чай.jpg" alt="Чай" loading="lazy">
+      </div>
+
+      <!-- Фильтры -->
+      <div class="menu-filters" role="tablist" aria-label="Категории">
+        <button class="filter-btn filter-btn--active" data-category="all">Все</button>
+        <button class="filter-btn" data-category="breakfast">🌅 Завтраки</button>
+        <button class="filter-btn" data-category="coffee">☕ Кофе</button>
+        <button class="filter-btn" data-category="cacao">🍫 Какао</button>
+        <button class="filter-btn" data-category="drinks">🌿 Напитки</button>
+        <button class="filter-btn" data-category="desserts">🍰 Десерты</button>
+      </div>
+
+      <!-- Категории -->
+      <div class="menu-categories" id="menuCategories"></div>
+
+      <!-- Промо-полоса -->
+      <div class="menu-promo-strip">
+        <span class="menu-promo-strip__icon">🎁</span>
+        <p>При заказе <strong>3 блюд</strong> — американо или кофе в джезве <strong>в подарок</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ГАЛЕРЕЯ НАПИТКОВ ===== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Авторские напитки</span>
+        <h2 class="section-title">То, что вы не найдёте больше нигде</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure class="gallery__item gallery__item--tall">
+          <img src="Фото/Напитки/Дагестанский капучино.jpg" alt="Дагестанский капучино с урбечом" loading="lazy">
+          <figcaption>Дагестанский капучино<br><small>с горским мёдом и урбечом</small></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="Фото/Напитки/Какао.jpg" alt="Церемониальное какао" loading="lazy">
+          <figcaption>Церемониальное какао<br><small>горькое, как оно должно быть</small></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="Фото/Напитки/Капучино.jpg" alt="Капучино с цветами" loading="lazy">
+          <figcaption>Капучино<br><small>с ромашкой и пионами</small></figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall">
+          <img src="Фото/Напитки/Кофе на песке.jpg" alt="Кофе в джезве на песке" loading="lazy">
+          <figcaption>Кофе в джезве<br><small>на песке, по-восточному</small></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== МИНИ-ИГРА ===== -->
+  <section class="game-section" id="game">
+    <div class="container">
+      <div class="game-wrapper">
+        <div class="game-header">
+          <span class="section-tag section-tag--light">Бесплатная игра</span>
+          <h2 class="section-title section-title--light">Проверь, насколько ты знаешь про правильное питание</h2>
+          <p class="game-header__sub">Ответь на 5 вопросов — и получи <strong>скидку 15%</strong> на любой заказ. Работает прямо здесь, без регистрации.</p>
+        </div>
+
+        <div class="game-box" id="gameBox">
+          <!-- Экран старта -->
+          <div class="game-screen game-screen--start" id="gameStart">
+            <div class="game-start__emoji">🧠🍎</div>
+            <h3>5 вопросов. 2 минуты. Скидка 15%.</h3>
+            <p>Нет правильных ответов «для гиков». Всё просто и понятно — как объяснил бы друг за столом.</p>
+            <button class="btn btn--primary btn--lg" id="gameStartBtn">Начать игру →</button>
+          </div>
+
+          <!-- Экран вопроса -->
+          <div class="game-screen game-screen--hidden" id="gameQuestion">
+            <div class="game-progress">
+              <div class="game-progress__bar" id="gameProgressBar"></div>
+            </div>
+            <p class="game-question-counter" id="gameCounter">Вопрос 1 из 5</p>
+            <h3 class="game-question-text" id="gameQuestionText"></h3>
+            <div class="game-options" id="gameOptions"></div>
+            <div class="game-feedback" id="gameFeedback"></div>
+          </div>
+
+          <!-- Экран результата -->
+          <div class="game-screen game-screen--hidden" id="gameResult">
+            <div class="game-result__emoji" id="gameResultEmoji">🏆</div>
+            <h3 id="gameResultTitle"></h3>
+            <p class="game-result__text" id="gameResultText"></p>
+            <div class="game-discount" id="gameDiscount">
+              <div class="game-discount__code" id="discountCode"></div>
+              <p>Покажите этот код при заказе или впишите в поле «Промокод» в форме ниже</p>
+            </div>
+            <button class="btn btn--primary btn--lg" id="gameRestartBtn">Пройти ещё раз</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ЗАКАЗ ТОРТА ===== -->
+  <section class="cake-section" id="cake">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">На заказ</span>
+        <h2 class="section-title">Торт без сахара, который не стыдно поставить на стол</h2>
+        <p class="section-subtitle">Без глютена, лактозы и рафинированного сахара. Готовим под ваш праздник — от дня рождения до корпоратива</p>
+      </div>
+
+      <div class="cake-layout">
+        <!-- Галерея тортов -->
+        <div class="cake-gallery">
+          <div class="cake-gallery__main">
+            <img src="Фото/Торт/Raw торт.jpg" alt="Шоколадный RAW торт с ягодами" class="cake-gallery__img active" data-img="0">
+          </div>
+          <div class="cake-gallery__thumbs">
+            <button class="cake-thumb cake-thumb--active" data-index="0">
+              <img src="Фото/Торт/Raw торт.jpg" alt="RAW торт">
+            </button>
+            <button class="cake-thumb" data-index="1">
+              <img src="Фото/Торт/Птичье молоко.jpg" alt="Птичье молоко">
+            </button>
+            <button class="cake-thumb" data-index="2">
+              <img src="Фото/Торт/Бенто.jpg" alt="Бенто-десерт">
+            </button>
+            <button class="cake-thumb" data-index="3">
+              <img src="Фото/Торт/Тарт.jpg" alt="Тарт">
+            </button>
+            <button class="cake-thumb" data-index="4">
+              <img src="Фото/Торт/Raw конфеты.jpg" alt="RAW конфеты">
+            </button>
+          </div>
+        </div>
+
+        <!-- Форма заказа -->
+        <div class="cake-form-wrapper">
+          <form class="cake-form" id="cakeForm" novalidate>
+            <h3 class="cake-form__title">Заказать торт</h3>
+            <p class="cake-form__hint">Заполните форму — перезвоним в течение часа и уточним детали</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cakeName">Ваше имя *</label>
+                <input type="text" id="cakeName" name="name" placeholder="Как к вам обращаться?" required>
+              </div>
+              <div class="form-group">
+                <label for="cakePhone">Телефон *</label>
+                <input type="tel" id="cakePhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cakeType">Что заказываем? *</label>
+                <select id="cakeType" name="type" required>
+                  <option value="" disabled selected>Выберите вариант</option>
+                  <option value="raw-tort">Шоколадный RAW торт</option>
+                  <option value="ptichye">«Птичье молоко»</option>
+                  <option value="bento">Бенто-десерт</option>
+                  <option value="tart">Тарт</option>
+                  <option value="confetti">RAW конфеты</option>
+                  <option value="custom">Хочу свой вариант</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cakeDate">Дата подачи</label>
+                <input type="date" id="cakeDate" name="date" min="">
+              </div>
+            </div>
+
+            <!-- Ориентировочная стоимость -->
+            <div class="cake-estimate" id="cakeEstimate" hidden>
+              <div class="cake-estimate__row">
+                <span>Ориентировочная стоимость:</span>
+                <strong id="cakeEstimateValue"></strong>
+              </div>
+              <small>Точную стоимость подтвердим по телефону</small>
+            </div>
+
+            <div class="form-group" id="cakeWeightGroup">
+              <label for="cakeWeight">Вес / размер</label>
+              <select id="cakeWeight" name="weight">
+                <option value="" disabled selected>Не важно / посоветуйте</option>
+                <option value="500g">~500 г (на 4–6 человек)</option>
+                <option value="1kg">~1 кг (на 8–10 человек)</option>
+                <option value="1500g">~1,5 кг (на 12–15 человек)</option>
+                <option value="2kg">~2 кг (на 15–20 человек)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cakeWish">Пожелания</label>
+              <textarea id="cakeWish" name="wish" rows="3" placeholder="Надпись, начинка, аллергии, повод — всё, что хотите учесть"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="cakePromo">Промокод <span class="optional">(если прошли игру выше ↑)</span></label>
+              <input type="text" id="cakePromo" name="promo" placeholder="Например: ZHIVY-15">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full btn--lg">Отправить заявку 🎂</button>
+            <p class="form-note">Перезвоним в течение часа в рабочее время (08:00–20:00). Без предоплаты — платите при получении.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== БОНУСЫ ===== -->
+  <section class="bonus" id="bonus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Вернётся к вам</span>
+        <h2 class="section-title">Бонусная программа</h2>
+        <p class="section-subtitle">Каждый заказ делает следующий дешевле</p>
+      </div>
+
+      <div class="bonus-cards">
+        <div class="bonus-card bonus-card--highlight">
+          <span class="bonus-card__icon">🎁</span>
+          <h3>−50% на первый заказ</h3>
+          <p>Откройте бонусную карту по номеру телефона — и скидка 50% сразу в силе</p>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-card__icon">💰</span>
+          <h3>Баллы за каждый заказ</h3>
+          <p>Начисляются автоматически при оплате QR-кодом у кассы</p>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-card__icon">🎉</span>
+          <h3>Подарки за лояльность</h3>
+          <p>Чем чаще заходите — тем щедрые подарки от кафе</p>
+        </div>
+      </div>
+
+      <div class="bonus__cta">
+        <a href="tel:+79220266646" class="btn btn--primary btn--lg">Открыть карту по телефону</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Гости говорят</span>
+        <h2 class="section-title">★★★★★ 5.0 на Яндекс.Картах</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <p class="review-card__text">«Пришла за кофе — осталась на два часа. Вафли с красной рыбой — это нечто. И да, реально без сахара, но сладость чувствуется!»</p>
+          <footer class="review-card__author">Мария, постоянный гость</footer>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <p class="review-card__text">«Заказали торт на день рождения мамы. Она на диете, но съела три куска и сказала, что это лучший торт в её жизни.»</p>
+          <footer class="review-card__author">Дмитрий, клиент</footer>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <p class="review-card__text">«Работаю удалёнко, обживаюсь в Сириусе. Здесь можно и поработать, и нормально поесть. Дагестанский капучино — мой ритуал каждое утро.»</p>
+          <footer class="review-card__author">Алексей, digital-номад</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="final-cta">
+    <div class="container final-cta__inner">
+      <div class="final-cta__bg">
+        <img src="Фото/Торт/Raw торт.jpg" alt="" loading="lazy">
+        <div class="final-cta__overlay"></div>
+      </div>
+      <div class="final-cta__content">
+        <h2>Голодны уже?</h2>
+        <p>Мы открыты. Приходите — или закажите торт на выходных.</p>
+        <div class="final-cta__buttons">
+          <a href="tel:+79220266646" class="btn btn--white btn--lg">📞 Позвонить</a>
+          <a href="https://t.me/podnozhnyj_korm" target="_blank" rel="noopener" class="btn btn--glass btn--lg">✈️ Написать в Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КОНТАКТЫ ===== -->
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Как нас найти</span>
+        <h2 class="section-title">Ждём вас в Сириусе</h2>
+      </div>
+      <div class="contacts__grid">
+        <div class="contacts__info">
+          <div class="contacts__item">
+            <span class="contacts__icon">📍</span>
+            <h3>Адрес</h3>
+            <p>ФТ Сириус, ул. Цимлянская, 12к13</p>
+          </div>
+          <div class="contacts__item">
+            <span class="contacts__icon">🕐</span>
+            <h3>Часы работы</h3>
+            <p>Ежедневно с 08:00 до 20:00</p>
+          </div>
+          <div class="contacts__item">
+            <span class="contacts__icon">📞</span>
+            <h3>Телефон</h3>
+            <a href="tel:+79220266646" class="contacts__phone">+7 (922) 026-66-46</a>
+          </div>
+          <div class="contacts__item">
+            <span class="contacts__icon">✈️</span>
+            <h3>Telegram</h3>
+            <a href="https://t.me/podnozhnyj_korm" target="_blank" rel="noopener" class="contacts__tg">@podnozhnyj_korm</a>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=39.983160%2C43.389837&z=17&pt=39.983160%2C43.389837%2Cpm2rdm"
+            width="100%" height="280" frameborder="0"
+            title="Карта: Подножный корм, Сириус"
+            loading="lazy" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="Фото/Логотипы/1147365f-47c1-4ac1-829f-dd351f2c93ec.jpeg" alt="Подножный корм" width="32" height="32">
+        <span>Кафе здорового питания · Сириус</span>
+      </div>
+      <p class="footer__copy">© 2025 «Подножный корм» · Ежедневно 08:00 – 20:00</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Bar -->
+  <nav class="bottom-bar" aria-label="Быстрые действия">
+    <a href="#menu" class="bottom-bar__item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+      <span>Меню</span>
+    </a>
+    <a href="#game" class="bottom-bar__item bottom-bar__item--accent">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>Игра</span>
+    </a>
+    <a href="#cake" class="bottom-bar__item bottom-bar__item--primary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Заказать</span>
+    </a>
+    <a href="#cake" class="bottom-bar__item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span>Торт</span>
+    </a>
+  </nav>
+
+  <!-- ===== LIGHTBOX (просмотр фото на весь экран) ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <button class="lightbox__close" data-close-lightbox aria-label="Закрыть">&times;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- ===== ВЫПАДАЮЩАЯ СКИДКА ===== -->
+  <div class="popup-discount" id="popupDiscount" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-discount__backdrop" data-close-popup></div>
+    <div class="popup-discount__panel">
+      <button class="popup-discount__close" data-close-popup aria-label="Закрыть">&times;</button>
+      <div class="popup-discount__content">
+        <div class="popup-discount__badge">🔥 Подарок за первый визит</div>
+        <h3 id="popupTitle">−10% на заказ прямо сейчас</h3>
+        <p>Покажите этот промокод кассиру или впишите в форму заказа:</p>
+        <div class="popup-discount__code" id="popupCode">PRIEM-10</div>
+        <p class="popup-discount__timer">Предложение действует <strong id="popupTimer">10:00</strong></p>
+        <button class="btn btn--primary btn--full" onclick="document.getElementById('cake').scrollIntoView({behavior:'smooth'})">Заказать со скидкой →</button>
+        <p class="popup-discount__hint">Хотите больше? Пройдите игру выше — там <strong>−15%</strong> 🎮</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
